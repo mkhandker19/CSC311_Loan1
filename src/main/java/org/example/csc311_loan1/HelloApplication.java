@@ -13,6 +13,7 @@ public class HelloApplication extends Application {
 
     @Override
     public void start(Stage primaryStage) {
+        //These are all my Labels, TextFields, and Buttons
         Label interestRate = new Label("Annual Interest Rate:");
         TextField textRate = new TextField();
 
@@ -32,6 +33,7 @@ public class HelloApplication extends Application {
 
         Button calculate = new Button("Calculate");
 
+        //After the button is clicked these actions will occur
         calculate.setOnAction(e -> {
 
             double rate = Double.parseDouble(textRate.getText());
@@ -47,6 +49,7 @@ public class HelloApplication extends Application {
             total.setText(String.format("$%.1f", totalPayment));
         });
 
+        //This sets the layout for the application
         GridPane gridPane = new GridPane();
         gridPane.setAlignment(Pos.CENTER);
         gridPane.setPadding(new Insets(15));
